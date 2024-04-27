@@ -1,0 +1,152 @@
+.container {
+  display: flex;
+  flex-direction: row;
+}
+.map-container {
+  width: 60%;
+  margin: 10px;
+  padding: 15px;
+  border: 1px solid rgba(180, 180, 180, 0.7);
+  border-radius: 10px;
+  #map {
+    height: 700px;
+    margin: auto;
+  }
+}
+
+.edit-container {
+  width: 40%;
+  margin: 10px;
+  padding: 5px 15px;
+  border: 1px solid rgba(180, 180, 180, 0.7);
+  border-radius: 10px;
+
+  .toolbar {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+
+    .toolbar-btn {
+      margin: 2px;
+      cursor: pointer;
+      border: 1px solid black;
+      border-radius: 5px;
+      padding: 5px;
+      width: 25px;
+      height: 25px;
+      text-align: center;
+
+      &:hover {
+        background-color: aliceblue;
+      }
+    }
+  }
+
+  .search {
+    margin: 10px 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+  }
+
+  .layers-records {
+    overflow: auto;
+    max-height: 300px;
+    margin: 25px 0;
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+
+      font-size: 0.9em;
+      font-family: sans-serif;
+      min-width: 400px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+      thead tr {
+        background-color: #009879;
+        color: #ffffff;
+        text-align: left;
+        text-transform: uppercase;
+      }
+
+      th,
+      td {
+        padding: 12px 15px;
+      }
+      tbody tr {
+        border-bottom: 1px solid #dddddd;
+      }
+      tbody tr:nth-of-type(even) {
+        background-color: #f3f3f3;
+      }
+      tbody tr:last-of-type {
+        border-bottom: 2px solid #009879;
+      }
+      tbody tr.active-row {
+        font-weight: bold;
+        color: #009879;
+      }
+
+      td button {
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        text-decoration: underline;
+        color: #009879;
+
+        &:hover {
+          color: gray;
+          scale: 1.1;
+        }
+      }
+    }
+  }
+}
+
+.icon {
+  width: 5px;
+  height: 5px;
+  background-color: white;
+  border: 1px solid #333;
+}
+
+/* popup style */
+.leaflet-popup-useraction-buttons,
+.leaflet-popup-input-actions {
+  display: flex;
+  justify-content: space-between;
+  padding: 13px 19px 10px 19px;
+}
+
+a.leaflet-popup-remove-button,
+a.leaflet-popup-edit-button,
+a.leaflet-popup-input-cancel,
+a.leaflet-popup-input-save {
+  border-bottom: none;
+  text-decoration: none;
+}
+a.leaflet-popup-edit-button,
+a.leaflet-popup-input-save {
+  margin-left: auto;
+  text-align: right;
+}
+a.leaflet-popup-remove-button:hover,
+a.leaflet-popup-edit-button:hover,
+a.leaflet-popup-input-cancel:hover,
+a.leaflet-popup-input-save:hover {
+  color: #0078a8;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.leaflet-popup-input {
+  border: 1px solid lightgrey;
+  min-width: 160px;
+  max-width: 250px;
+  margin: 19px 19px 0px 19px;
+  padding: 5px;
+}
+.leaflet-popup-input:focus {
+  outline: 2px solid #60b7da;
+  border: 1px solid #60b7da;
+}
